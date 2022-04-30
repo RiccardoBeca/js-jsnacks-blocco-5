@@ -6,6 +6,8 @@ Dividi in due array separati le zucchine che misurano meno o più di 15cm. Infin
 
 */
 
+const shortCourgettes = [];
+const longCourgettes = [];
 
 
 const courgetteVariety = [
@@ -73,3 +75,32 @@ const courgetteVariety = [
 //  };
  
 //  console.log(pesoTot);
+
+let smallCourgettesWeight = 0;
+let bigCourgettesWeight = 0;
+
+
+for (let i = 0; i < courgetteVariety.length; i++) {
+  
+  let currentLength = courgetteVariety[i].lunghezza;
+
+  if (currentLength <= 15 ) {
+    shortCourgettes.push(courgetteVariety[i]);
+    smallCourgettesWeight += courgetteVariety[i].peso;
+   } else {
+    longCourgettes.push(courgetteVariety[i]);
+    bigCourgettesWeight += courgetteVariety[i].peso;
+
+  }
+};
+console.log("zucchina short", shortCourgettes);
+console.log("zucchina long", longCourgettes);
+
+console.log("peso piccole", smallCourgettesWeight);
+console.log("peso grandi", bigCourgettesWeight);
+
+
+
+
+
+
